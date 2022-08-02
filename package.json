@@ -1,0 +1,26 @@
+{
+  "name": "teammedicaps",
+  "version": "1.0.0",
+  "description": "Backend for Table App",
+  "main": "app.js",
+  "scripts": {
+    "build":"cd client && npm run build",
+    "install-client":"cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"nodemon app.js\" \"cd client && npm start\"",
+    "start": "node app.js"
+  },
+  "author": "Shruti Lathi, krati tare, Priyanshu gupta",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-openid-connect": "^2.5.2",
+    "mongoose": "^6.1.5",
+    "nodemon": "^2.0.15"
+  }
+}
